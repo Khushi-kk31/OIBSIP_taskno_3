@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="fadeAnimation">
+            <img src="./assets/favicon.png" alt="">
+            Tempreture Converter
+        </div>
+
+        <div class="wrapper">
+
+            <div class="input-box">
+                <h3>Enter Temperature</h3>
+                <div class="input-field">
+                    <label for="degree">Degree</label><br>
+                    <input type="number" id="degree" placeholder="Enter Degree" value="0" onfocus="this.value=''">
+                    <select class="input-control" id="selectInputDegreeType">
+                        <option value="C" selected>&deg;C</option>
+                        <option value="F">&deg;F</option>
+                        <option value="K">K</option>
+                    </select>
+                </div>
+
+                <div class="conversion-field">
+                    <label for="select" >Convert In</label><br>
+                    <select name="select" id="select-conversion-field">
+                        <option value="F" selected>Fahrenheit(&deg;F)</option>
+                        <option value="C">Celsius(&deg;C)</option>
+                        <option value="K">Kelvin(K)</option>
+                    </select>
+                </div>
+
+                <div class="convert-btn" >
+                    <button onclick="tempConverter()">
+                        Convert
+                        <i class="fa-solid fa-paper-plane fa-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="display-box">
+                <div class="result-value">
+                    <div id="result">32</div>
+                    <div id="deg">&deg;</div>
+                    <div id="unit">F</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<script src="script.js"></script>
+</body>
+</html>
